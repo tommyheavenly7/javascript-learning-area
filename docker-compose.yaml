@@ -1,0 +1,9 @@
+version: "3.7"
+services:
+  node:
+    container_name: "es6-node"
+    image: "docker.pkg.github.com/tommyheavenly7/docker-node/node14:latest"
+    volumes:
+      - "./project:/var/project:delegated"
+      - "./docker/.volumes/npm:/root/.npm:delegated"
+    working_dir: /var/project
